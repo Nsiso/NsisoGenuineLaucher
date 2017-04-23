@@ -1,0 +1,36 @@
+﻿<Window x:Class="NsisoGenuineLaucher.Download"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NsisoGenuineLaucher"
+        mc:Ignorable="d"
+        Title="下载页" Height="300" Width="500" AllowsTransparency="True" WindowStyle="None" Background="#F2FFFFFF" WindowStartupLocation="CenterOwner" Loaded="Window_Loaded">
+    <Grid>
+        <Grid Name="grid1" Visibility="Visible">
+            <Rectangle Fill="#FF75AEFF" HorizontalAlignment="Left" Height="218" VerticalAlignment="Top" Width="500" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+            <Label x:Name="label1" Content="你貌似丢失了一些文件" HorizontalAlignment="Left" Margin="59,50,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36"/>
+            <Label x:Name="label2" Content="是否尝试自动补全？" HorizontalAlignment="Left" Margin="128,111,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24"/>
+            <Label x:Name="label3" Content="否则有可能会导致游戏无法正常运行" HorizontalAlignment="Left" Margin="93,156,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+            <Button x:Name="button" Content="自动下载" HorizontalAlignment="Left" Margin="257,254,0,0" VerticalAlignment="Top" Width="134" Height="36" Background="#FF75AEFF" Foreground="White" BorderBrush="{x:Null}" Click="button_Click"/>
+            <Button x:Name="button_Copy" Content="取消" HorizontalAlignment="Left" Margin="93,254,0,0" VerticalAlignment="Top" Width="134" Height="36" Background="#FFCDCDCD" Foreground="Black" BorderBrush="{x:Null}" Click="button_Copy_Click"/>
+            <Label x:Name="label" Content="一共丢失了" HorizontalAlignment="Left" Margin="119,224,0,0" VerticalAlignment="Top"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="194,229,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top"/>
+            <Label x:Name="label4" Content="个游戏必要的运行库文件" HorizontalAlignment="Left" Margin="213,224,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="checkBox" Content="不再提示" HorizontalAlignment="Left" Margin="422,275,0,0" VerticalAlignment="Top"/>
+        </Grid>
+        <Grid Name="grid2" Visibility="Hidden">
+            <ListView x:Name="listView" HorizontalAlignment="Left" Height="260" Margin="10,10,0,0" VerticalAlignment="Top" Width="480" Background="{x:Null}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="文件名称"></GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ProgressBar  Name="prog" HorizontalAlignment="Left" Height="15" Margin="116,275,0,0" VerticalAlignment="Top" Width="294" IsIndeterminate="True"/>
+            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,275,0,0" TextWrapping="Wrap" Text="下载中...(请勿关闭)" VerticalAlignment="Top"/>
+            <Button x:Name="button1" Content="关闭" HorizontalAlignment="Left" Margin="415,270,0,0" VerticalAlignment="Top" Width="75" Height="25" BorderBrush="{x:Null}" Click="button1_Click"/>
+
+        </Grid>
+    </Grid>
+</Window>

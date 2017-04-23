@@ -1,0 +1,16 @@
+﻿<Window x:Class="NsisoGenuineLaucher.DialogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NsisoGenuineLaucher"
+        mc:Ignorable="d"
+        Title="出现意外！" Height="150" Width="380" Background="#F2FFFFFF" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="75" Margin="30,40,0,0" VerticalAlignment="Top" Width="76" Source="warn.png"/>
+        <TextBlock x:Name="titleBox" HorizontalAlignment="Left" Margin="106,40,0,0" TextWrapping="Wrap" Text="错误标题" VerticalAlignment="Top" FontSize="20" Width="240"/>
+        <TextBlock x:Name="noteBox" HorizontalAlignment="Left" Margin="106,65,0,0" TextWrapping="Wrap" Text="错误信息" VerticalAlignment="Top" Height="50" Width="240"/>
+        <Button x:Name="button" Content="确定" HorizontalAlignment="Left" Margin="254,120,0,0" VerticalAlignment="Top" Width="86" Background="#FF75AEFF" Foreground="White" BorderBrush="{x:Null}" Height="30" Click="button_Click"/>
+
+    </Grid>
+</Window>
