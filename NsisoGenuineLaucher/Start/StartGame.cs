@@ -45,7 +45,7 @@ namespace NsisoGenuineLaucher.Start
                 }
                 else
                 {
-                    //App.Core.JavaPath = Config.IniGS.javaPath;
+                    App.Core.JavaPath = Config.IniGS.javaPath;
                 }
 
                 //启动核心初始化
